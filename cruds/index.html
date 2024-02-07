@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/cruds.css">
+    <link rel="stylesheet" href="./icons/css_icon/all.min.css">
+    <title>cruds</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head" id="head">
+             <h1>cruds</h1>
+             <p>create read update delete search</p>
+             <h4 class='alert alert-danger' id="head_h"></h4>
+        </div>
+        <div class="inputs_cont">
+            <input placeholder="title"  id="title" class="form-control"  type="text">
+            <div class="inp_cont"> 
+                <input onkeyup="get_total()" placeholder="price" id="price" class="form-control" type="number">
+                <input onkeyup="get_total()" placeholder="taxes" id="taxes" class="form-control" type="number">
+                <input onkeyup="get_total()" placeholder="ads" id="ads" class="form-control" type="number">
+                <input onkeyup="get_total()" placeholder="discount" id="discount" class="form-control" type="number">
+                <small id="total"> </small>
+            </div>
+            <input placeholder="count" id="count" class="form-control"  type="text">
+            <input placeholder="category" id="category" class="form-control"  type="text">
+            <button onclick="create_el()" class="btn_s" id="create">create</button>
+        </div>
+        <div class="output">
+            <input placeholder="search" onkeyup="search()" id="search" class="form-control" type="text">
+            <div class="btn_cont">
+                <button class="btn_s" id="s_title">search by title</button>
+                <button class="btn_s" id="s_category">search by category</button>
+            </div>
+            <button class="btn_s del" onclick="delete_all()" id="delete"></button>
+            <table  class="tbl">
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbl">
+
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    
+
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/cdnjs.cloudflare.com_ajax_libs_popper.js_1.11.0_umd_popper.min.js"></script>
+    <script src="./js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./cruds.js"></script>
+</body>
+</html>
